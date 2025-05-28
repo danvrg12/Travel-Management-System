@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Main page</title>
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+  /*----------Banner---------*/
+  .form {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  width: 70%;
+  padding: 1% 10%;
+}
+
+.header-image input,
+.date,
+.book {
+  padding: 15px;
+  margin-right: 10px;
+  font-size: 18px;
+  font-family: Roboto;
+  border-radius: 5px;
+  outline: 0;
+  border: none;
+}
+
+.header-image input {
+  width: 50%;
+  flex: 2;
+}
+
+.date {
+  width: 20%;
+  flex: 1;
+}
+
+.book {
+  width: 20%;
+  flex: 1;
+}
+
+.book {
+  text-decoration: none;
+  color: rgb(130, 48, 0);
+  text-transform: uppercase;
+  padding: 15px;
+  cursor: pointer;
+  background-color: #f6a157;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Barlow Condensed";
+  width: 20%;
+}
+
+    .header-image {
+      text-align: center;
+      padding: 100px;
+      background-image: url("web.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+      font-size: 30px;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #a15839;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .navbar a.right {
+      float: right;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: Brown;
+    }
+
+    .navbar a.active {
+      background-color: #bc5317;
+      color: white;
+    }
+
+
+  .container {
+        display: flex;
+        align-items: center;
+        justify-content: center
+      }
+      img {
+        max-width: 100%
+      }
+      .image {
+        padding: 50px;
+        flex-basis: 300%
+      }
+      .text {
+        font-size: 20px;
+        padding: 40px;
+        color: rgb(193, 74, 19);
+        font-family: 'Brush Script MT', cursive;
+      }
+     
+      #para1 {
+    color: #a15839;
+    font-family: cursive;
+    }
+
+/*--------- Camping Activites-----------*/
+
+
+    #para4 {
+      text-align: left;
+      color: #993608;
+      padding-left: 170px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: large;
+    }
+
+    .para5 {
+      text-align: left;
+      color: #993608;      
+      padding-left: 140px;
+      font-family: 'Playfair Display', serif;
+      font-size: xxx-large;
+      line-height: 0%;
+    }
+
+    #para6 {
+      padding-left: 0px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: large;
+      color: #a15839;
+    }
+
+    #para7 {
+      padding-right: 0px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: large;
+      color: #a15839;
+    }
+    .image-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .image-container1 {
+      padding-left: 150px; /* Left: 80px, Right: 20px */
+    }
+
+    .image-container2 {
+      padding-right: 150px; /* Left: 20px, Right: 80px */
+    }
+
+    .image-container img {
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      margin: 0 10px;
+      transition: transform 0.7s;
+    
+    }
+
+    .image-container img:hover {
+      transform: scale(1.1);
+    }
+
+    .image-container a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+   /*----------------Thrilling Activites--------------------------*/
+
+   .grid-container h1 {
+  text-align: center;
+}
+
+.grid-item p {
+ margin-bottom: 10px;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-item {
+  position: relative;
+  background-color: rgb(251, 251, 251);
+  padding: 20px;
+  text-align: center;
+}
+
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+  transition: opacity 0.3s;
+}
+
+.grid-item:hover img {
+  opacity: 0.7;
+}
+
+.grid-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 103, 16, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.grid-item:hover .overlay {
+  opacity: 1;
+}
+
+.grid-item .overlay p {
+  color: white;
+  font-size: 18px;
+}
+
+#para2 {
+    color: #993608;
+    font-family: 'Playfair Display', serif;
+    font-size: xxx-large; 
+    text-align: center;
+    }
+
+
+    /*------------------------------------------------------*/
+
+.gallery {
+  --s: 130px; /* control the size of the images*/
+  
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  gap: 5px;
+  position: relative;
+}
+.gallery input {
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 50%;
+  inset: calc(50% - var(--s)/3);
+  cursor: pointer;
+  --g: linear-gradient(#000 0 0) no-repeat;
+  background: var(--g) 50%/var(--b,0%) 3px,var(--g) 50%/3px var(--b,0%);
+  transition: 1.5s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.gallery > img {
+  width: var(--s);
+  aspect-ratio: 1;
+  object-fit: cover;
+  transform: scale(.1);
+  filter: brightness(0);
+  pointer-events: none;
+  transform-origin: var(--x) var(--y);
+  transition: 1s calc((var(--i) - 1)*.1s);
+}
+.gallery > img:nth-of-type(1) {--i:1;--x: 150%;--y:150%;}
+.gallery > img:nth-of-type(2) {--i:2;--x:  50%;--y:150%;}
+.gallery > img:nth-of-type(3) {--i:3;--x: -50%;--y:150%;}
+.gallery > img:nth-of-type(4) {--i:4;--x: 150%;--y:50%; }
+.gallery > img:nth-of-type(5) {--i:5 }
+.gallery > img:nth-of-type(6) {--i:6;--x: -50%;--y:50%; }
+.gallery > img:nth-of-type(7) {--i:7;--x: 150%;--y:-50%;}
+.gallery > img:nth-of-type(8) {--i:8;--x:  50%;--y:-50%;}
+.gallery > img:nth-of-type(9) {--i:9;--x: -50%;--y:-50%;}
+
+.gallery > input:checked ~ img {
+  transform: scale(1);
+  filter: brightness(1);
+  pointer-events: initial;
+}
+.gallery > input:checked {
+  transform: translateY(calc(1.75*var(--s))) scale(.5) rotate(45deg);
+  --b: 70%;
+}
+
+/*-----------------Gallery------------------*/
+
+ #circlegallery {
+   line-height:0;
+   -webkit-column-count:5; /* split it into 5 columns */
+   -webkit-column-gap:5px; /* give it a 5px gap between columns */
+   -moz-column-count:5;
+   -moz-column-gap:5px;
+   column-count:5;
+   column-gap:5px; 
+} 
+
+#circlegallery img {
+   width: 100% !important;
+   height: auto !important;
+   margin-bottom:5px; /* to match column gap */
+   transition: transform 0.3s ease-in-out;
+}
+
+#circlegallery img:hover {
+   transform: scale(1.1);
+}
+
+@media (max-width: 1200px) {
+   #circlegallery {
+    -moz-column-count:    4;
+    -webkit-column-count: 4;
+    column-count:         4;
+   }
+}
+
+@media (max-width: 800px) {
+   #circlegallery {
+    -moz-column-count:    2;
+    -webkit-column-count: 2;
+    column-count:         2;
+   }
+} 
+
+/*----------------GALLERY------------*/
+#gallery {
+   line-height:0;
+   -webkit-column-count:5; /* split it into 5 columns */
+   -webkit-column-gap:5px; /* give it a 5px gap between columns */
+   -moz-column-count:5;
+   -moz-column-gap:5px;
+   column-count:5;
+   column-gap:5px;
+}
+
+#gallery img {
+   width: 100% !important;
+   height: auto !important;
+   margin-bottom:5px; /* to match column gap */
+   transition: transform 0.3s ease-in-out;
+}
+
+#gallery img:hover {
+   transform: scale(1.1);
+}
+
+@media (max-width: 1200px) {
+   #gallery {
+    -moz-column-count:    4;
+    -webkit-column-count: 4;
+    column-count:         4;
+   }
+}
+
+@media (max-width: 800px) {
+   #gallery {
+    -moz-column-count:    2;
+    -webkit-column-count: 2;
+    column-count:         2;
+   }
+}
+
+#para13:link, #para13:visited {
+  background-color: #ab563a;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  border-style: double;
+  display: inline-block;
+}
+
+#para13:hover {
+  background-color: #995d4a;
+
+}
+
+#para12{
+ color: #ac2f06;
+ font-family: 'Times New Roman', Times, serif;
+ font-size: xx-large;
+}
+
+/*----------------Footer------------*/
+footer {
+    background-color: rgb(131, 51, 1);
+    padding: 20px 0;
+}
+
+.container6 {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.fa:hover {
+  opacity: 0.7;
+  transform: scale(1.2);
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #cb3c75;
+  color: white;
+}
+
+footer {
+  justify-content: center;
+}
+
+.social {
+  padding-left: 450px;
+}
+
+#para10 {
+  font-size: large;
+}
+
+  </style>
+</head>
+
+<body>
+  
+
+  <div class="navbar">
+    <a href="main.html" class="active">Home</a>
+    <a href="contactus.html">Contact Details</a>
+    <a href="signup.html">Login</a>
+    <a href="#" class="right">Log out</a>
+  </div>
+
+  <div class="header-image">
+    <h1>Travel</h1>
+    <p>Explore the <b>Beauty</b> around you</p>
+
+    <form class="form">
+      <input type="text" list="mylist" placeholder="Where would you like to go?">
+      <datalist id="mylist">
+          <option>London</option>
+          <option>New York</option>
+          <option>Bora Bora</option>
+          <option>Amsterdam</option>
+          <option>Paris</option>
+      </datalist>
+      <input type="date" class="date">
+      <a href="london.html" class="book">search</a>
+  </form> 
+
+  </div>
+
+  <div class="container">
+      <div class="image">
+        <img src="https://i.pinimg.com/474x/66/9f/11/669f11bb182e3b5410d1352a2d53e9d8.jpg">
+      </div>
+      <div class="text">
+        <h1><center>GO THE EXTRA MILE</center></h1>
+           <p id="para1"><i>One of the best things about traveling is that it opens our minds and hearts to new possibilities. We learn about different ways of life, different ways of thinking, and different ways of being. This can help us to become more tolerant and understanding people. Traveling also allows us to meet new people from all over the world. We can learn about their cultures, their traditions, and their stories. This can help us to feel more connected to humanity and to the world around us. Of course, traveling is not without its challenges. It can be expensive, time-consuming, and sometimes frustrating. But the rewards far outweigh the risks. Travel can enrich our lives in so many ways. It can help us to learn more about ourselves, to grow as individuals, and to create memories that will last a lifetime.</i></p>
+      </div>
+    </div>
+
+<!----------Undergroung Activites---------->
+
+<div class="container3">
+  <p id="para4">HOW ABOUT GO TO</p>
+  <h1 class="para5">CAMPING</h1>
+  <div class="content">
+    
+  </div>
+  <div class="image-container">
+    <div class="image-container1">
+      <a href="https://example.com/image1">
+        <img src="https://i.pinimg.com/564x/12/d4/c6/12d4c6c6b5838351e215d941224220f8.jpg" alt="Image 1">
+      </a>
+      <p id="para6"><i>Explore the breathtaking beauty of the underwater <br> world through sea diving, where vibrant marine <br> life and serene tranquility await. Our expert guides <br> ensure a safe and unforgettable experience, catering <br> to both seasoned divers and beginners alike.</i></p>
+    </div>
+    <div class="image-container2">
+      <p id="para7"><i>Escape to the great outdoors and embrace the beauty of <br> nature through camping, where you can unwind amidst <br>stunning landscapes and create lasting memories under <br> the starry skies. With a variety of camping options being <br> available, there's something for every adventurer <br> seeking  a tranquil getaway.</i><br></p>
+      <a href="https://example.com/image2">
+        <img src="https://i.pinimg.com/564x/e4/1e/ae/e41eaee0a8f91879de58a6afca7e026d.jpg" alt="Image 2">
+      </a>
+      
+    </div>
+  </div>
+</div>
+
+<!---------- Different Activites ------------> 
+
+<p id="para2"><b>Looking For Some More Thrilling Adventures?<b></p>
+
+<div class="grid-container">
+
+  <div class="grid-item">
+    <a href="https://example.com/image2">
+    <img src="https://i.pinimg.com/474x/9c/13/4f/9c134fd926ea51a3ebaae9d8c531f144.jpg" alt="Image 1">
+    <div class="overlay">
+      <p>TRECKING</p>
+    </div>
+    </a>
+  </div>
+  
+  <div class="grid-item">
+    <a href="https://example.com/image2">
+    <img src="https://i.pinimg.com/474x/5b/61/2a/5b612a1d42f4d526a2944fa7193f7cbb.jpg" alt="Image 2">
+    <div class="overlay">
+      <p>PARAGLIDING</p>
+    </div>
+   </a>
+  </div>
+  
+
+  <div class="grid-item">
+    <a href="https://example.com/image2">
+     <img src="https://i.pinimg.com/474x/bd/7b/d8/bd7bd8f8bce7531eb975290413ec1ab0.jpg" alt="Image 1">
+     <div class="overlay">
+     <p>SKY DIVING</p>
+    </div>
+   </a>
+  </div>
+  <div class="grid-item">
+    <a href="https://example.com/image2">
+    <img src="https://i.pinimg.com/564x/d7/f3/ef/d7f3efd196acc713d49971325dee7333.jpg" alt="Image 2">
+    <div class="overlay">
+     <p>HIGHLINING</p> <br><br>
+    </div>
+   </a>
+  </div>
+ <br><br>
+</div>
+ 
+
+ <!-----------------------GALLERY------------------------>
+ <h1 id="para12"><i>Immerse Yourself in Our Visual Delights</h1> 
+  <div id="gallery">
+    
+    <img src="https://i.pinimg.com/474x/54/09/8f/54098fea9ed2750e824ed7201326b928.jpg"> <!--girl-->
+    <img src="https://i.pinimg.com/474x/7d/83/c5/7d83c5b60ee45f5949183aa587b665c4.jpg"> <!--asthetic map-->
+    <img src="https://i.pinimg.com/474x/d7/dc/2a/d7dc2af03f105d3a7ae0ac0ac1a7dc45.jpg"> <!--sea-->
+    <img src="https://i.pinimg.com/474x/f5/db/76/f5db76c29e37a8951518e5a0a90ddb79.jpg"> <!--hot air baloons-->
+    <img src="https://i.pinimg.com/474x/b0/f4/b5/b0f4b53926ffb3186184238285abf981.jpg"> <!--flower garden-->
+    <img src="https://i.pinimg.com/474x/49/20/ce/4920ce84b4911b00e70dd4f5cd5f7765.jpg"> <!--road-->
+    <img src="https://i.pinimg.com/474x/0b/41/9f/0b419f4309b03c12a6b4ad34f9d95b77.jpg"> <!--mountain Top-->
+    <img src="https://i.pinimg.com/474x/57/91/61/57916109746d39bf0db74b39c2ef6af3.jpg">
+    <img src="https://i.pinimg.com/474x/c4/07/00/c40700391e74708318d2511b4a214ec2.jpg">
+    <img src="https://i.pinimg.com/474x/5d/6d/f3/5d6df386b811b3c18077c049ba8fafe4.jpg"> 
+    <!--<a href="https://example.com"><img src="explore.png"></a> mountain-->
+  
+    <center>
+      <a id="para13" href="gallery.html"><i>Explore More--></i></a>
+      </center>
+ 
+   </div>
+   <br>
+<!-- <div class="circlegallery">
+  <input type="checkbox">
+  <img src="https://picsum.photos/id/1028/300/300" alt="a forest after an apocalypse">
+  <img src="https://picsum.photos/id/15/300/300" alt="a waterfall and many rocks">
+  <img src="https://picsum.photos/id/1040/300/300" alt="a house on a mountain">
+  <img src="https://picsum.photos/id/106/300/300" alt="sime pink flowers">
+  <img src="https://picsum.photos/id/136/300/300" alt="big rocks with some trees">
+  <img src="https://picsum.photos/id/1039/300/300" alt="a waterfall, a lot of tree and a great view from the sky">
+  <img src="https://picsum.photos/id/110/300/300" alt="a cool landscape">
+  <img src="https://picsum.photos/id/1047/300/300" alt="inside a town between two big buildings">
+  <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
+</div> -->
+
+
+<footer>
+  <div class="container6">
+      <p id="para10">
+          Discover the world with our expert travel guides and curated itineraries.
+          <br>
+          Your satisfaction is our priority - contact our 24/7 customer support for any assistance 
+      </p>
+      <p>    
+          <br>
+          <i>Disclaimer: The information provided on this website is for general informational purposes only. We make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information contained on the website. Any reliance you place on such information is strictly at your own risk. In no event will we be liable for any loss or damage arising from the use of this website.</i>
+          <br>
+          &copy; 2023 TravelTheWorld. All rights reserved.
+      </p>
+  </div>
+ <div class="social"> 
+  <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+  <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D" class="fa fa-twitter"></a>
+  <a href="https://in.linkedin.com/?src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558721_kw.linkedin%20login_d.c_tid.kwd-12704335873_n.g_mt.e_geo.9062006&mcid=6844056167778418689&cid=&gclid=CjwKCAiA6byqBhAWEiwAnGCA4PQyUgcJSE_bCY30533LSxXZrL_hOvoY9sCFEVA1W1h7HxQ5xbQpfBoCI2kQAvD_BwE&gclsrc=aw.ds" class="fa fa-linkedin"></a>
+  <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+  <a href="https://www.instagram.com/accounts/login/?hl=en" class="fa fa-instagram"></a> 
+ </div> 
+
+</footer>
+
+</body>
+
+</html>

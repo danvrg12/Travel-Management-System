@@ -1,0 +1,46 @@
+   /* background color */
+body
+{
+  background-color: linen;
+}
+
+
+   /*TEXT STYLES*/
+#para1 {
+  text-align: right;
+} 
+
+#para3 {
+  color: maroon;
+  text-align: center;
+} 
+
+#para2 {
+  color: black;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+} 
+
+#para5:visited {
+  color: violet;
+  background-color: transparent;
+  text-decoration: none;
+}
+#para5:hover {
+  color: maroon;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+div.gallery:hover {
+  
+  border: 5px solid #777;
+  width: 600px;
+  height: 400px; 
+}
+
+
+   
+
+
+
